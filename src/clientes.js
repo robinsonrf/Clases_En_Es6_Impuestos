@@ -1,17 +1,18 @@
-export default class Cliente {
+export default 
+    class Cliente {
     constructor(nombre, impuesto) {
-        this._nombre = nombre;  
-        this._impuesto = impuesto || []; 
+        this._nombre = nombre;
+        this._impuesto = impuesto || [];
     }
 
     get nombre() {
         return this._nombre;
     }
 
-    set nombre(nuevonombre){
+    set nombre(nuevonombre) {
         this._nombre = nuevonombre;
-        }
-        
+    }
+
 
 
     get impuesto() {
@@ -19,9 +20,9 @@ export default class Cliente {
     }
 
 
-calcularImpuesto(impuesto){
+    calcularImpuesto(impuesto) {
 
-    this._impuesto = ((impuesto.monto_bruto_anual - impuesto.deducciones)*21/100);
+        this._impuesto = ((impuesto.monto_bruto_anual - impuesto.deducciones) * 21 / 100);
 
-}
+    }
 }
